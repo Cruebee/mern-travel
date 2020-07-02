@@ -12,8 +12,6 @@ import {
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 
-import { v4 as uuidv4 } from 'uuid'; // uuid will not be used once backend is connected, just for setup.
-
 // You always want form inputs to have a piece of state in the component.
 class ItemModal extends Component {
   state = {
@@ -35,7 +33,6 @@ class ItemModal extends Component {
     e.preventDefault();
 
     const newItem = {
-      id: uuidv4(),
       name: this.state.name
     }
 
