@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
   newItem.save().then(item => res.json(item));
 });
 
-// @route   DELETE api/items
+// @route   DELETE api/items/:id
 // @desc    Delete An Item
 // @access  Public
 router.delete('/:id', (req, res) => {
