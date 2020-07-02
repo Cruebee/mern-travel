@@ -17,6 +17,17 @@ export default function (state = initialState, action) {
       return {
         ...state
       };
+    case DELETE_ITEM:
+      return {
+        ...state, // spread operator (...) provides everything currently in the state
+        items: state.items.filter(item => item.id !== action.payload) // access payload from itemActions.js via action.payload
+      };
+    case ADD_ITEM:
+      return {
+        ...state,
+        items: [action.payload, ...state.items]
+      };
+
     default:
       return state;
   }
