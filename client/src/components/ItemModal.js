@@ -93,4 +93,5 @@ const mapStateToProps = state => ({
   item: state.item
 });
 
+// Don't forget to add mapStateToProps when using connect!
 export default connect(mapStateToProps, { addItem })(ItemModal);
