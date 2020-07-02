@@ -10,17 +10,8 @@ const app = express();
 // BodyParser Middleware
 app.use(bodyParser.json());
 
-// DB Config
-const db = require('./config/keys').mongoURI;
-
 // Connect to MongoDB
-mongoose
-  .connect(db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err));
+mongoose.connect('mongodb+srv://cruebee:Alycatterson420@travel-cluster.k6ahw.mongodb.net/travel-board?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //Use Routes
 app.use('/api/items', items);
