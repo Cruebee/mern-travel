@@ -30,7 +30,11 @@ class AppNavbar extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="https://github.com/Cruebee/mern-travel">
+                  <NavLink
+                    href="https://github.com/Cruebee/mern-travel"
+                    rel="noopener noreferrer" // allows safe use of target="_blank"
+                    target="_blank"
+                  >
                     GitHub
                 </NavLink>
                 </NavItem>
